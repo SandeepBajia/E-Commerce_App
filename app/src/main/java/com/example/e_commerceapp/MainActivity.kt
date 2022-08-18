@@ -109,7 +109,7 @@ import kotlinx.android.synthetic.main.header_layout.*
 
     }
 
-      
+
        override fun onOptionsItemSelected(item: MenuItem): Boolean {
            if(actionBarDrawerToggle.onOptionsItemSelected(item)) {
                return true
