@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ProductAvailability">
+        <item>@string/available</item>
+        <item>@string/notavailable</item>
+    </string-array>
+
+    <string-array name="userType">
+        <item>@string/customer</item>
+        <item>@string/seller</item>
+    </string-array>
+
+    <string-array name="deliveryStatusOption">
+        <item>@string/orderConfirmed</item>
+        <item>@string/shipped</item>
+        <item>@string/outforOrder</item>
+        <item>@string/delivered</item>
+    </string-array>
+</resources>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3EB489">
+
+<ScrollView
+    android:id = "@+id/scroolview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_above="@id/buttonLayout">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity">
+        <TextView
+           android:id = "@+id/deliveryStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Status -"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/deliverystatus"/>
+
+        <TextView
+            android:id = "@+id/deliverystatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_margin="20dp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/deliveryStatus"
+            />
+
+    <ImageView
+        android:id = "@+id/imageviewProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryStatus" />
+    <TextView
+        android:id = "@+id/nameProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/statusProduct" />
+
+    <TextView
+        android:id = "@+id/priceProductReal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionProduct"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/priceProductDiscount"/>
+
+     <TextView
+         android:id = "@+id/priceProductDiscount"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="discount"
+         android:layout_margin="20dp"
+         android:textColor="#FF0000"
+         android:textStyle="bold"
+         android:textSize="20sp"
+         app:layout_constraintTop_toBottomOf="@id/descriptionProduct"
+         app:layout_constraintLeft_toRightOf="@id/priceProductReal"
+         />
+
+        <TextView
+            android:id = "@+id/percentDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="discount"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/descriptionProduct"
+            app:layout_constraintLeft_toRightOf="@id/priceProductDiscount"
+            />
+
+
+        <TextView
+        android:id = "@+id/statusProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:layout_margin="20dp"
+        android:textColor="#3DDC84"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/priceProductReal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id = "@+id/descriptionProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="description"
+        android:layout_margin="20dp"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/imageviewProduct"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+     <RatingBar
+         android:id="@+id/ratingBarProduct"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         style="?android:attr/ratingBarStyleSmall"
+         android:numStars="5"
+         app:layout_constraintTop_toBottomOf="@+id/nameProduct"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_margin="20dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phoneview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarProduct"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text = "Phone No."
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id = "@+id/EditPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Phone Number"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/changePhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="10sp"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addressview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/phoneview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text = "Address"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id = "@+id/EditAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/changeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change"
+                android:layout_margin="10dp"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+    <LinearLayout
+        android:id ="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true">
+    <Button
+        android:id="@+id/addCart"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text = "Add to Cart"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
+    <Button
+        android:id="@+id/submitOrder"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text=" Submit Order"
+        android:backgroundTint="#FF0000"
+
+      />
+    </LinearLayout>
+</RelativeLayout>

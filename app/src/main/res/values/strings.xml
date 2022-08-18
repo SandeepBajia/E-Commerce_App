@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">E-Commerce App</string>
+
+    <string name="product_name">product name</string>
+    <string name="product_price">product price</string>
+    <string name="productStatus">product status </string>
+    <string name="product_description">product description</string>
+
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="logout">Sign Out </string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="AddProduct">Add Product</string>
+    <string name="addname">Add Name</string>
+    <string name="addDescription">Add Description</string>
+
+    <string name="available">Available</string>
+    <string name="notavailable">Not Available</string>
+    <string name="product">Product</string>
+    <string name="receiveOrder">Receive Order</string>
+
+    <string name="customer">Customer</string>
+    <string name="seller">Seller</string>
+    <string name="title_activity_seller">SellerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="rupee">\u20B9 </string>
+
+    <string name="orderConfirmed">Order Confirmed</string>
+    <string name="shipped">Shipped</string>
+    <string name="outforOrder">out for confirmed</string>
+    <string name="delivered">Delivered</string>
+
+</resources>
